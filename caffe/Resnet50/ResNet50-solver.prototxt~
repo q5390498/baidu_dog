@@ -1,0 +1,17 @@
+net: "/home/zyh/PycharmProjects/baidu_dog/caffe/Resnet50/ResNet-50-trainval.prototxt"
+#type:"Adam"
+test_iter: 170
+test_interval: 2000
+base_lr: 1
+lr_policy: "step"
+gamma: 0.1
+stepsize: 2000
+display: 10
+max_iter: 200000
+momentum: 0.99
+regularization_type:"L2"
+weight_decay: 0.0005
+snapshot: 10000
+snapshot_prefix: "/home/zyh/PycharmProjects/baidu_dog/caffe/Resnet50/re"
+solver_mode: GPU
+#type: "Nesterov"

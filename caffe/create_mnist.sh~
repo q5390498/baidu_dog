@@ -1,0 +1,20 @@
+#!/usr/bin/env sh
+# This script converts the mnist data into lmdb/leveldb format,
+# depending on the value assigned to $BACKEND.
+set -e
+
+EXAMPLE=/home/zyh/PycharmProjects/baidu_dog/caffe
+DATA=/
+BUILD=/home/zyh/caffe/build/examples/mnist
+
+BACKEND="lmdb"
+
+echo "Creating ${BACKEND}..."
+
+rm -rf $EXAMPLE/mnist_train_${BACKEND}
+rm -rf $EXAMPLE/mnist_test_${BACKEND}
+
+$BUILD/convert_mnist_data.bin $DATA/train.txt $EXAMPLE/train_${BACKEND} --backend=${BACKEND}
+$BUILD/convert_mnist_data.bin $DATA/val.txt $EXAMPLE/test_${BACKEND} --backend=${BACKEND}
+
+echo "Done."

@@ -1,0 +1,16 @@
+net: "/home/zyh/PycharmProjects/baidu_dog/caffe/finetune_from_bvlc/train_val.prototxt"
+test_iter: 1000
+test_interval: 500
+test_initialization: false
+display: 40
+average_loss: 40
+base_lr: 0.01
+lr_policy: "step"
+stepsize: 5000
+gamma: 0.8
+max_iter: 100000
+momentum: 0.8
+weight_decay: 0.02
+snapshot: 5000
+snapshot_prefix: "/home/zyh/PycharmProjects/baidu_dog/caffe/finetune_from_bvlc/googlenet_"
+solver_mode: GPU

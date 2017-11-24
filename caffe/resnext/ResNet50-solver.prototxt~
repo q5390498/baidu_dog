@@ -1,0 +1,15 @@
+net: "/home/zyh/PycharmProjects/baidu_dog/caffe/resnext/resnext101_64x4d_trainval.prototxt"
+test_iter: 170
+test_interval: 220
+base_lr: 0.0001
+lr_policy: "step"
+gamma: 0.1
+stepsize: 2000
+display: 10
+max_iter: 100000
+momentum: 0.9
+weight_decay: 0.005
+snapshot: 2000
+snapshot_prefix: "/home/zyh/PycharmProjects/baidu_dog/caffe/resnext/model_snapshot"
+solver_mode: GPU
+type: "Nesterov"

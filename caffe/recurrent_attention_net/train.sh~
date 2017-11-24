@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+set -e
+
+/home/zyh/caffe//build/tools/caffe train --solver=/home/zyh/PycharmProjects/baidu_dog/caffe/recurrent_attention__net/RA_CNN_trainval.prototxt --weights /home/zyh/PycharmProjects/baidu_dog/caffe/recurrent_attention__net/recurrent-attention-model/RA_CNN.caffemodel --gpu 0 2>&1 | tee /home/zyh/PycharmProjects/baidu_dog/caffe/recurrent_attention__net/train.log$@
